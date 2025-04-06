@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkHub - Messages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #1A73E8 0%, #6C63FF 100%);
+    }
+    .message-container {
+      height: calc(100vh - 200px);
+    }
+    .chat-list {
+      height: calc(100vh - 150px);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header (reusable) -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">LinkHub</h1>
+      <div class="flex space-x-4">
+        <a href="index.html" class="hover:text-gray-200"><i class="fas fa-home"></i></a>
+        <a href="profile.html" class="hover:text-gray-200"><i class="fas fa-user"></i></a>
+        <a href="friends.html" class="hover:text-gray-200"><i class="fas fa-users"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Messages Content -->
+  <main class="container mx-auto px-4 py-4">
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+      <div class="flex">
+        <!-- Left Sidebar - Chat List -->
+        <div class="w-1/3 border-r">
+          <div class="p-3 border-b">
+            <h2 class="text-xl font-bold">Messages</h2>
+          </div>
+          <div class="chat-list overflow-y-auto">
+            <!-- Chat 1 -->
+            <div class="p-3 border-b hover:bg-gray-50 cursor-pointer">
+              <div class="flex items-center space-x-3">
+                <img src="https://images.pexels.com/photo/774909/pexels-photo-774909.jpeg" class="w-12 h-12 rounded-full">
+                <div>
+                  <p class="font-semibold">Alex Johnson</p>
+                  <p class="text-sm text-gray-500 truncate">Hey, how's the project going?</p>
+                </div>
+                <span class="ml-auto text-xs text-gray-400">2h</span>
+              </div>
+            </div>
+            
+            <!-- Chat 2 -->
+            <div class="p-3 border-b hover:bg-gray-50 cursor-pointer bg-blue-50">
+              <div class="flex items-center space-x-3">
+                <img src="https://images.pexels.com/photo/1239291/pexels-photo-1239291.jpeg" class="w-12 h-12 rounded-full">
+                <div>
+                  <p class="font-semibold">Sarah Williams</p>
+                  <p class="text-sm text-gray-500 truncate">Let's meet tomorrow for coffee</p>
+                </div>
+                <span class="ml-auto text-xs text-gray-400">1d</span>
+              </div>
+            </div>
+            
+            <!-- Chat 3 -->
+            <div class="p-3 border-b hover:bg-gray-50 cursor-pointer">
+              <div class="flex items-center space-x-3">
+                <img src="https://images.pexels.com/photo/91227/pexels-photo-91227.jpeg" class="w-12 h-12 rounded-full">
+                <div>
+                  <p class="font-semibold">David Lee</p>
+                  <p class="text-sm text-gray-500 truncate">Thanks for the help yesterday!</p>
+                </div>
+                <span class="ml-auto text-xs text-gray-400">3d</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Message Thread -->
+        <div class="w-2/3 flex flex-col">
+          <!-- Chat Header -->
+          <div class="p-3 border-b flex items-center">
+            <img src="https://images.pexels.com/photo/1239291/pexels-photo-1239291.jpeg" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <p class="font-semibold">Sarah Williams</p>
+              <p class="text-xs text-gray-500">Active now</p>
+            </div>
+          </div>
+
+          <!-- Messages -->
+          <div class="message-container p-4 overflow-y-auto bg-gray-50">
+            <!-- Message from Sarah -->
+            <div class="flex mb-4">
+              <img src="https://images.pexels.com/photo/1239291/pexels-photo-1239291.jpeg" class="w-8 h-8 rounded-full mr-2">
+              <div>
+                <div class="bg-white p-3 rounded-lg shadow max-w-xs">
+                  <p>Hey! How are you doing?</p>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">10:30 AM</p>
+              </div>
+            </div>
+
+            <!-- Your reply -->
+            <div class="flex mb-4 justify-end">
+              <div>
+                <div class="gradient-bg text-white p-3 rounded-lg shadow max-w-xs">
+                  <p>I'm good! Just working on the LinkHub project</p>
+                </div>
+                <p class="text-xs text-gray-500 mt-1 text-right">10:32 AM</p>
+              </div>
+            </div>
+
+            <!-- Message from Sarah -->
+            <div class="flex mb-4">
+              <img src="https://images.pexels.com/photo/1239291/pexels-photo-1239291.jpeg" class="w-8 h-8 rounded-full mr-2">
+              <div>
+                <div class="bg-white p-3 rounded-lg shadow max-w-xs">
+                  <p>That's great! Let's meet tomorrow for coffee and you can tell me more about it</p>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">10:33 AM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Input -->
+          <div class="p-3 border-t">
+            <div class="flex items-center">
+              <input type="text" placeholder="Type a message..." 
+                     class="flex-1 p-2 border rounded-l-lg focus:outline-none focus:ring-1 focus:ring-blue-500">
+              <button class="gradient-bg text-white px-4 py-2 rounded-r-lg hover:opacity-90">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (reusable) -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2023 LinkHub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
