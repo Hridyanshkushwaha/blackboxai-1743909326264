@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkHub - Friends</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #1A73E8 0%, #6C63FF 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header (reusable) -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">LinkHub</h1>
+      <div class="flex space-x-4">
+        <a href="index.html" class="hover:text-gray-200"><i class="fas fa-home"></i></a>
+        <a href="profile.html" class="hover:text-gray-200"><i class="fas fa-user"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fas fa-users"></i></a>
+        <a href="messages.html" class="hover:text-gray-200"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Friends Content -->
+  <main class="container mx-auto px-4 py-6">
+    <div class="bg-white rounded-lg shadow p-4 mb-6">
+      <h2 class="text-2xl font-bold mb-4">Friends</h2>
+      
+      <!-- Search Bar -->
+      <div class="relative mb-6">
+        <input type="text" placeholder="Search friends..." 
+               class="w-full p-3 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+      </div>
+
+      <!-- Friend Requests -->
+      <div class="mb-8">
+        <h3 class="font-bold text-lg mb-4">Friend Requests</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Request 1 -->
+          <div class="flex items-center justify-between p-3 border rounded-lg">
+            <div class="flex items-center space-x-3">
+              <img src="https://images.pexels.com/photo/1222271/pexels-photo-1222271.jpeg" class="w-12 h-12 rounded-full">
+              <div>
+                <p class="font-semibold">Michael Brown</p>
+                <p class="text-sm text-gray-500">5 mutual friends</p>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="gradient-bg text-white px-4 py-1 rounded-full text-sm">Confirm</button>
+              <button class="bg-gray-200 px-4 py-1 rounded-full text-sm">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Friends -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">All Friends (24)</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Friend 1 -->
+          <div class="text-center">
+            <img src="https://images.pexels.com/photo/774909/pexels-photo-774909.jpeg" class="w-full rounded-lg mb-2">
+            <p class="font-semibold">Alex Johnson</p>
+            <button class="text-blue-500 text-sm mt-1">Message</button>
+          </div>
+          
+          <!-- Friend 2 -->
+          <div class="text-center">
+            <img src="https://images.pexels.com/photo/1239291/pexels-photo-1239291.jpeg" class="w-full rounded-lg mb-2">
+            <p class="font-semibold">Sarah Williams</p>
+            <button class="text-blue-500 text-sm mt-1">Message</button>
+          </div>
+          
+          <!-- Friend 3 -->
+          <div class="text-center">
+            <img src="https://images.pexels.com/photo/91227/pexels-photo-91227.jpeg" class="w-full rounded-lg mb-2">
+            <p class="font-semibold">David Lee</p>
+            <button class="text-blue-500 text-sm mt-1">Message</button>
+          </div>
+          
+          <!-- Friend 4 -->
+          <div class="text-center">
+            <img src="https://images.pexels.com/photo/1181690/pexels-photo-1181690.jpeg" class="w-full rounded-lg mb-2">
+            <p class="font-semibold">Emily Chen</p>
+            <button class="text-blue-500 text-sm mt-1">Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (reusable) -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2023 LinkHub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
