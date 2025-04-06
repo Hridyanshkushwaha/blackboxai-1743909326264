@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkHub - Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #1A73E8 0%, #6C63FF 100%);
+    }
+    .cover-photo {
+      height: 300px;
+      background-image: url('https://images.pexels.com/photo/4663285/pexels-photo-4663285.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header (reusable) -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">LinkHub</h1>
+      <div class="flex space-x-4">
+        <a href="index.html" class="hover:text-gray-200"><i class="fas fa-home"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fas fa-user"></i></a>
+        <a href="friends.html" class="hover:text-gray-200"><i class="fas fa-users"></i></a>
+        <a href="messages.html" class="hover:text-gray-200"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Profile Content -->
+  <main class="container mx-auto px-4">
+    <!-- Cover Photo -->
+    <div class="cover-photo rounded-lg shadow-lg relative mb-16">
+      <div class="absolute -bottom-16 left-6">
+        <img src="https://images.pexels.com/photo/1550129/pexels-photo-1550129.jpeg" 
+             class="w-32 h-32 rounded-full border-4 border-white">
+      </div>
+      <button class="absolute top-4 right-4 bg-white text-gray-800 px-4 py-1 rounded-full shadow hover:bg-gray-100">
+        <i class="fas fa-camera mr-2"></i>Edit Cover
+      </button>
+    </div>
+
+    <!-- Profile Info -->
+    <div class="flex flex-col md:flex-row gap-6 mb-6">
+      <!-- Left Column -->
+      <div class="w-full md:w-1/3 space-y-4">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h2 class="font-bold text-xl mb-2">Jane Doe</h2>
+          <p class="text-gray-600 mb-4">Digital Designer at LinkHub</p>
+          
+          <div class="space-y-3">
+            <div class="flex items-center">
+              <i class="fas fa-briefcase text-gray-500 w-6"></i>
+              <span>Works at LinkHub</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-home text-gray-500 w-6"></i>
+              <span>Lives in San Francisco, CA</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-heart text-gray-500 w-6"></i>
+              <span>Single</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="font-bold mb-3">About</h3>
+          <p class="text-gray-700">Passionate about creating beautiful digital experiences. Love hiking and photography in my free time.</p>
+        </div>
+      </div>
+
+      <!-- Right Column (Posts) -->
+      <div class="w-full md:w-2/3 space-y-4">
+        <!-- Post Creation -->
+        <div class="bg-white p-4 rounded-lg shadow">
+          <textarea class="w-full p-2 border rounded" placeholder="What's on your mind?"></textarea>
+          <button class="mt-2 gradient-bg text-white px-4 py-2 rounded hover:opacity-90">Post</button>
+        </div>
+
+        <!-- Example Posts -->
+        <div class="bg-white p-4 rounded-lg shadow">
+          <div class="flex items-center space-x-2 mb-2">
+            <img src="https://images.pexels.com/photo/1550129/pexels-photo-1550129.jpeg" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="font-semibold">Jane Doe</p>
+              <p class="text-gray-500 text-sm">Yesterday at 3:45 PM</p>
+            </div>
+          </div>
+          <p class="mb-2">Just redesigned my portfolio! Check it out and let me know what you think.</p>
+          <img src="https://images.pexels.com/photo/196644/pexels-photo-196644.jpeg" class="w-full rounded mb-2">
+          <div class="flex space-x-4 text-gray-500">
+            <button class="hover:text-blue-500"><i class="fas fa-thumbs-up"></i> Like</button>
+            <button class="hover:text-blue-500"><i class="fas fa-comment"></i> Comment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (reusable) -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2023 LinkHub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
